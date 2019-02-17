@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ProduktTest {
@@ -22,7 +23,8 @@ public class ProduktTest {
         }
         //       System.out.println(product[0].getPrice());
         System.out.println("Łączna cena: " + pm.sum(product));
-        System.out.println("Najdroższy produkt: " + pm.EspensiveProuct(product) + "jest w cenie: " + pm.max(product));
+        Product prod = pm.EspensiveProuct(product);
+        System.out.println("Najdroższy produkt: " + pm.EspensiveProuct(product).toString() + " jest w cenie: " + pm.max(product));
 
 
     }

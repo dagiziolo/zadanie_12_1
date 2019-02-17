@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ProductMethod {
 
     public double sum(Product[] product) {
@@ -19,18 +21,13 @@ public class ProductMethod {
     }
 
 
-    public String EspensiveProuct(Product[] product) {
-        String prouctName = null;
+    public Product EspensiveProuct(Product[] product) {
+        Product prod = null;
         for (int i = 0; i < product.length; i++) {
             if (product[i].getPrice() == max(product)) {
-                if (prouctName == null) {
-                    prouctName = product[i].getName();
-                } else {
-                    prouctName = prouctName + ", " + product[i].getName();
-                }
+                prod = product[i];
             }
         }
-        return prouctName;
+        return prod;
     }
-
 }
